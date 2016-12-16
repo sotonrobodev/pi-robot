@@ -39,7 +39,7 @@ class Outputs(object):
     		val = False
 
     	cmd = Power.CMD_WRITE_output0 + index
-    	self.handle.controlWrite(0, 64, val, cmd, 0)
+    	self.handle.controlWrite(0, 64, val, cmd, "")
 
 
 class Power:
