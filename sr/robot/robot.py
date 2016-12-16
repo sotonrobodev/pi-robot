@@ -1,7 +1,8 @@
 # Copyright Robert Spanton 2014
 import json, sys, optparse, time, os, glob
 import logging
-import motor, power, ruggeduino, vision, servo
+#import motor, power, ruggeduino, vision, servo
+import motor, power, ruggeduino, servo
 import pyudev
 
 logger = logging.getLogger( "sr.robot" )
@@ -92,7 +93,7 @@ class Robot(object):
 
         logger.info( "Initialising hardware." )
         self._init_devs()
-        self._init_vision()
+#        self._init_vision()
 
         if not self._quiet:
             self._dump_devs()
@@ -115,7 +116,7 @@ class Robot(object):
         self._dump_usbdev_dict( self.motors, "Motors" )
         self._dump_usbdev_dict( self.servos, "Servos" )
         self._dump_usbdev_dict( self.ruggeduinos, "Ruggeduinos" )
-        self._dump_webcam()
+#        self._dump_webcam()
 
     def _dump_webcam(self):
         "Write information about the webcam to stdout"
