@@ -47,7 +47,7 @@ class CustomRuggeduino(Ruggeduino):
             self.command(cmd)
 
 R = Robot.setup()
-R.ruggeduino_set_handler_by_fwver("Beeduino", CustomRuggeduino)
+R.ruggeduino_set_handler_by_fwver("SRDduino", CustomRuggeduino)
 R.init()
 R.wait_start()
 
